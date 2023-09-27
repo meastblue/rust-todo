@@ -1,10 +1,11 @@
-use axum::{Router, ServiceExt};
+
+use axum::{Router};
 use crate::route::Routes;
 
 pub struct Server;
 
 impl Server {
-    pub async fn init() -> Result<()> {
+    pub async fn init() -> Result<(), hyper::Error> {
         let routes = Router::new()
             .merge(Routes::routes());
 

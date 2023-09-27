@@ -7,6 +7,6 @@ pub struct TaskRoutes;
 impl TaskRoutes {
     pub fn routes() -> Router {
         Router::new()
-            .route("/", get(TaskHandler::index))
+            .route("/", get(TaskHandler::get))
     }
 }

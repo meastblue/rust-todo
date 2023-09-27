@@ -13,3 +13,5 @@ tower = "0.4.13"
 tower-http = { version = "0.4.4", features = ["cors"] }
 tokio = { version = "1.32.0", features = ["full"] }
 serde = { version = "1.0.188", features = ["derive"] }
+serde_json = { version = "1.0.107", features = [] }
+hyper = "0.14.27"

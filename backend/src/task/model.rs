@@ -1,6 +1,3 @@
-use std::process::id;
-use chrono::{DateTime, Local};
-use surrealdb::sql::Thing;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Deserialize, Serialize)]
@@ -20,13 +17,13 @@ pub struct Tasks {
 pub struct TaskModel;
 
 impl TaskModel {
-    pub fn get() -> Result<Task> {
+    pub async fn get() -> Option<Task> {
         let task = Task {
             id: "8466571346519576".into(),
             label: "Learn Rust".into(),
             completed: false,
         };
 
-        Ok(task)
+        Some(task)
     }
 }

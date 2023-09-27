@@ -1,6 +1,6 @@
 use axum::Router;
 use tower_http::cors::{Any, CorsLayer};
-use crate::task::routes::TaskRoutes;
+use crate::task::route::TaskRoutes;
 
 pub struct Routes;
 
